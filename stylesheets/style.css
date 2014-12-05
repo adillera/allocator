@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+}
+
+body {
+  background-color: #202020;
+}
+
+#main-container {
+  float: left;
+  background-color: #FFFFFF;
+  width: 90vw;
+  margin: 0 10vh;
+  min-height: 100vh;
+}
+
+#left-holder {
+  float: left;
+  width: 40%;
+}
+
+h1, h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+#left-holder div {
+  padding: 5px;
+  text-align: center;
+}
+
+#right-holder {
+  float: left;
+  width: 60%;
+}
+
+.company {
+  float: left;
+  width: 49%;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+}
+
+.company div {
+  padding: 5px;
+  text-align: center;
+}
+
+.company table {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.company table th {
+  width: 50%;
+}
+
+#allocation-holder {
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #CCCCCC;
+}

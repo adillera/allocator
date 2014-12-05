@@ -1,0 +1,74 @@
+<html ng-app="allocator">
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" >
+  </head>
+  <body>
+    <div id="main-container" ng-controller="AllocatorController">
+      <h1>Allocator V1.0</h1>
+
+      <div id="left-holder">
+        <h2>Unit / Unit Cost</h2>
+        <div ng-repeat="counter in unitCounter">
+          <input type="text" name="unit_{{ counter }}" ng-model="unit[counter]" placeholder="Unit" />
+          <input type="text" name="unit_cost_{{ counter }}" ng-model="unitCost[counter]" placeholder="Unit Cost" />
+        </div>
+
+        <div>
+          <a href="" ng-click="addFields()">Add new fields</a>
+        </div>
+      </div>
+
+      <div id="right-holder">
+        <h2>Allocation Details</h2>
+        <div class="company">
+          <div>
+            Company 1: <input type="text" ng-model="c1Percentage" />
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Unit</th>
+                <th>Unit Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="alloc in c1Allocation">
+                <td>{{ alloc.unit }}</td>
+                <td>{{ alloc.unitCost }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="company">
+          <div>
+            Company 2: {{ 100 - c1Percentage }}
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Unit</th>
+                <th>Unit Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="alloc in c2Allocation">
+                <td>{{ alloc.unit }}</td>
+                <td>{{ alloc.unitCost }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="allocation-holder">
+        <a href="" ng-click="allocate()">Allocate</a>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="javascripts/script.js"></script>
+  </body>
+</html>
