@@ -1,0 +1,13 @@
+Requirements:
+1. Internet connection (To download necessary script files).
+
+Usage:
+1. Input units and unit costs
+2. Use 'Add new fields' to add more unit and cost fields.
+3. Input percentage for Company 1 (e.g 10) (see Caveats).
+
+Caveats:
+1. Company 1 takes precedence.
+   - In cases that the number of units are odd (e.g. 3)
+
+2. Only randomizes, doesn't check the actual cost of the unit.
